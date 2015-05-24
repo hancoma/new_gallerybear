@@ -155,7 +155,7 @@ function goHref(url) {
             var cnt=member.length;
          
             var memberuid=member[cnt];
-
+            alert(memberuid);
             ref.close();
             goprofile(memberuid);
         }
