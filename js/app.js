@@ -152,10 +152,9 @@ function goHref(url) {
         var result2=link.indexOf('goprofile');
           if(result2>-1) {
             var member=link.split("&");
-            var cnt=member.length-1;
-         
-            var memberuid=member[cnt];
-            alert(memberuid+" "+cnt);
+            var cnt=member.length-1; // 2015-05-25일 수정 이전 배열에서 -1 해서 처리 &갯수 0,1,2,3 
+                     var memberuid=member[cnt];
+          
             ref.close();
             goprofile(memberuid);
         }
