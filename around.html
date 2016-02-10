@@ -106,7 +106,9 @@
     {
    
 
-      navigator.app.backHistory();
+       if (confirm('exit')) {
+        navigator.app.exitApp();
+    }
     
     }, false);
 
