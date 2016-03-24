@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.gallerybear.anyphoto" version="1.2.2" versionCode="99" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.gallerybear.anyphoto" version="1.2.2" versionCode="100" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>gallerybear</name>
     <description>
-       gallerybear APP
+       gallerybear AP
     </description>
     <author email="ch7@daum.net" href="http://m.gallerybear.com">
         gallerybear APP
