@@ -407,3 +407,12 @@ function alert_msg(title,msg,btn) {
 function alertend() {
 
 }
+
+// 뒤로가기 
+document.addEventListener("backbutton", function(e)
+    {
+   
+
+     navigator.app.backHistory();
+    
+    }, false);
