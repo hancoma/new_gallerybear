@@ -408,11 +408,4 @@ function alertend() {
 
 }
 
-// 뒤로가기 
-document.addEventListener("backbutton", function(e)
-    {
-   
 
-     navigator.app.backHistory();
-    
-    }, false);
