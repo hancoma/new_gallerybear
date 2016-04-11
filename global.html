@@ -87,12 +87,13 @@
         // Register the event listener
         var uuid=device.uuid;
             // uuid 정리 
-      // 뒤로가기 
-document.addEventListener("backbutton", function(e)
+        document.addEventListener("backbutton", function(e)
     {
    
 
-     navigator.app.backHistory();
+     if (confirm('exit')) {
+        navigator.app.exitApp();
+    }
     
     }, false);
 
@@ -726,7 +727,7 @@ w                                            <li><a href="global.html?sub_code=s
                         </li>
                                     </ul>
                             </li>
-                                        <li ><a href="#"  target=""  onclick="goHref('/premium1_app_web.php?main=');">
+                                        <li ><a href="#"  target=""  onclick="goHref('/match_app_web.php?main=');">
                             <img alt="green, star icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/green_star.png">
                             
             Premium</a>
@@ -751,7 +752,7 @@ w                                            <li><a href="global.html?sub_code=s
                             
             Link</a>
                         </li>
-                           <li><a href="http://map.pridebbs.com/"  target="">
+                           <li><a href="#"  target="" onclick="goHref('http://map.pridebbs.com/?main=');">
                             <img alt="blue, star icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn0.iconfinder.com/data/icons/sweets/128/blue_star.png">
                             
             Map</a>
