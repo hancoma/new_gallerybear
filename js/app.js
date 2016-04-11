@@ -162,6 +162,36 @@ function goHref(url) {
   });
 }
 
+function goHref_web(url) {
+  var url=url;
+  var uuid=device.uuid;
+  url=url+"&uuid="+uuid;
+  var ref = window.open(url, '_blank', 'location=no');
+  ref.addEventListener('loadstart', function(event) { 
+    
+
+        // 링크 주소 확인
+        link=event.url;
+        var result=link.indexOf('upload_file');
+    
+        // 파일 업로드 
+        if(result>-1) {
+            getImage_photo();
+        }
+
+        var result2=link.indexOf('goprofile');
+          if(result2>-1) {
+            var member=link.split("&");
+            var cnt=member.length-1; // 2015-05-25일 수정 이전 배열에서 -1 해서 처리 &갯수 0,1,2,3 
+                     var memberuid=member[cnt];
+          
+            ref.close();
+            goprofile(memberuid);
+        }
+
+  });
+}
+
 function getpage(uuid,page) {
     // 외부 페이지 가져 오기 
         // uuid는 기기 번호 
