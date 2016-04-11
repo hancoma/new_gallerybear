@@ -102,16 +102,15 @@
         });
 
     // gcm등록 
-        document.addEventListener("backbutton", function(e)
+        
+// 뒤로가기 
+document.addEventListener("backbutton", function(e)
     {
    
 
-       if (confirm('exit')) {
-        navigator.app.exitApp();
-    }
+     navigator.app.backHistory();
     
     }, false);
-
 
   document.addEventListener("menubutton", function(e)
     {
@@ -724,7 +723,7 @@
                         </li>
                                     </ul>
                             </li>
-                                        <li ><a href="#"  target=""  onclick="goHref('/match_app_web.php?main=');">
+                                        <li ><a href="#"  target=""  onclick="goHref('/premium1_app_web.php?main=');">
                             <img alt="green, star icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/green_star.png">
                             
             Premium</a>
