@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.gallerybear.anyphoto" version="1.3" versionCode="105" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.gallerybear.anyphoto" version="2.0" versionCode="110" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>gallerybear</name>
     <description>
        gallerybear AP
@@ -10,7 +10,7 @@
     <content src="index.html" />
     
     <preference name="permissions" value="none" />
-    <preference name="phonegap-version" value="cli-5.2.0" />
+    <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
