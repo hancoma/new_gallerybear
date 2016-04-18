@@ -32,7 +32,7 @@
 
 
         <script type="text/javascript">
-       alert("테스트");
+     
             $(function() {
 
                 $('nav#menu').mmenu();
@@ -127,7 +127,7 @@ document.addEventListener("backbutton", function(e)
          
        }, false);
 
-  
+
  var success = function(status) {
          navigator.notification.activityStop();
         }
@@ -136,12 +136,12 @@ document.addEventListener("backbutton", function(e)
          navigator.notification.activityStop();
         }
 navigator.notification.activityStart("gallerybear", "updating");
-    
+        window.cache.clear( success, error );
 
         
-    
+      
 
-  //check_uuid(uuid);
+  check_uuid(uuid);
  
  
     }
