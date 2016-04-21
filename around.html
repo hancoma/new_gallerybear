@@ -4,22 +4,22 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="author" content="hancoma" />
         <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no" />
+          <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 		    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 
-
-
-
-  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-		
-
         <link type="text/css" rel="stylesheet" href="css/demo2.css" />
+        <link type="text/css" rel="stylesheet" href="css/uikit.gradient.min.css" />
         
-        <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+  
+        <link rel="stylesheet" type="text/css" href="css/ratchet.min.css">
  
 
             
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/uikit.min.js"></script>
+        <script type="text/javascript" src="js/ratchet.min.js"></script>
     
         <script type="text/javascript" src="js/jquery.mmenu.js"></script>
 
@@ -28,54 +28,10 @@
     <script type="text/javascript" src="http://m.gallerybear.com/js/around.js"></script>
 
 
-        <script type="text/javascript">
-            $(function() {
-                $('nav#menu').mmenu();
-            });
-        </script>
+       
     <script type="text/javascript">
 
-            //  The menu on the left
-            $(function() {
-                $('nav#menu-left').mmenu();
-            });
-
-
-            //  The menu on the right
-            $(function() {
-
-                var $menu = $('nav#menu-right');
-
-                $menu.mmenu({
-                    position    : 'right',
-                    classes     : 'mm-light',
-                    dragOpen    : true,
-                    counters    : true,
-                    searchfield : true,
-                    labels      : {
-                        fixed       : !$.mmenu.support.touch
-                    },
-                    header      : {
-                        add         : true,
-                        update      : true,
-                        title       : 'Contacts'
-                    }
-                });
-
-                //  Click a menu-item
-                var $confirm = $('#confirmation');
-                $menu.find( 'li a' ).not( '.mm-subopen' ).not( '.mm-subclose' ).bind(
-                    'click.example',
-                    function( e )
-                    {
-                        e.preventDefault();
-                        $confirm.show().text( 'You clicked "' + $.trim( $(this).text() ) + '"' );
-                        $('#menu-right').trigger( 'close' );
-                    }
-                );
-            });
-    
-    
+       
     
   
 
@@ -141,32 +97,23 @@ document.addEventListener("backbutton", function(e)
     </head>
     
     <body onload="onLoad()">
-   <div id="home" style="display:none;">
-    <div id="app-status-div">
-        <ul id="app-status-ul">
-            <li>Cordova PushNotification Plugin Demo</li>
-        </ul>
-    </div>
-    <div id="myDiv" name="myDiv"></div>
-</div>
-
-  
-  
-        <div id="page">
-            <div id="header">
-                <a href="#menu"></a>
-            gallerybear
-                
-                        <a href="#menu-right" class="friends right"></a>
-            </div>
-            <div id="content">
-            <!-- 매일 페이지 나오는 부분 -->
-		
-            
-        
-            </div>
-              <nav id="menu">
-                <ul >
+    <header class="bar bar-nav">
+  <button class="btn btn-link btn-nav pull-left" data-uk-offcanvas="{target:'#left_menu'}">
+    <span class="icon icon-bars"></span>
+    MENU
+  </button>
+  <button class="btn btn-link btn-nav pull-right" data-uk-offcanvas="{target:'#right_menu'}">
+    MYPAGE
+    <span class="icon icon-person"></span>
+  </button>
+  <h1 class="title">Gallerybear</h1>
+</header>
+  <div id="left_menu" class="uk-offcanvas" aria-hidden="true">
+                                 
+               
+           
+                                <div class="uk-offcanvas-bar" id="menu">
+                                     <ul >
                                                         <li ><a href="around.html"  target="">
                         <img alt="local icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/local.png"> 
                         
@@ -743,11 +690,14 @@ document.addEventListener("backbutton", function(e)
                         
                                                 
 
-                </ul>
-            </nav>
+                </ul> 
+                                </div>
+                            </div>
+<div id="right_menu" class="uk-offcanvas" aria-hidden="true">
 
-          <nav id="menu-right">
-            <ul>
+                                <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+
+                                     <ul>
                             <li><span><img alt="login icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/logout.png"><a  onclick="logout();"> <span id="rightmenu1">Logout</span></span></a></li>
                 <li><span><img alt="email, envelope, mail icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/mail.png"><a onclick="goHref('/?mod=chat_main&uid=');"><span id="rightmenu2">Message Box</a></span></li>     
                 <li><span><a onclick="goHref('/?mod=mypage&&amp;page=people3');"> <img alt="friends, group, people, persons, users icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/Users.png"><span id="rightmenu3">viewlist</span></a></span></li>     
@@ -762,8 +712,31 @@ document.addEventListener("backbutton", function(e)
                 <li><span><a onclick="goHref('/?mod=setup2');"><img alt="premium, support icon" class="tiled-icon" style="width: 20px; height: 20px;" src="icon/premium_support.png"> <span id="rightmenu12">termsandconditions</span></a></span></li>
                 <li><span id="rightmenu0"></span></li>
                 </ul>
-            </nav>
 
+                                </div>
+
+                            </div>
+   <div id="home" style="display:none;">
+    <div id="app-status-div">
+        <ul id="app-status-ul">
+            <li>Cordova PushNotification Plugin Demo</li>
+        </ul>
+    </div>
+    <div id="myDiv" name="myDiv"></div>
+</div>
+
+  
+        <div id="page">
+            
+            <div id="content">
+            <!-- 매일 페이지 나오는 부분 -->
+		
+            
+        
+            </div>
+             
+
+          
         </div>
 
         <script>
