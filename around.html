@@ -87,13 +87,11 @@
         // Register the event listener
         var uuid=device.uuid;
             // uuid 정리 
-        document.addEventListener("backbutton", function(e)
+      document.addEventListener("backbutton", function(e)
     {
    
 
-     if (confirm('exit')) {
-        navigator.app.exitApp();
-    }
+     navigator.app.backHistory();
     
     }, false);
 
